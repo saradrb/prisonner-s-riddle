@@ -1,0 +1,22 @@
+L’énigme des cents prisonniers
+
+	L’énigme des cents prisonniers est un problème mathématique en théories des probabilités et en combinatoire.Ce problème fut proposé pour la première fois par l’informaticien danois Peter Bro Miltersen.
+	Ce problèmes nous parlent alors de cents prisonniers condamnés à mort avec néanmoins une dernière chance de s’en sortir.Le directeur de la prison leurs propose de jouer à un jeu, chaque prisonniers se voient attribuer un numéro allant de un à cent,Dans une pièce à part ou aucune interactions avec l’extérieur sont possibles, les cents numéros sont passés dans cents tiroirs, au centre de cette pièce.Un par un les cents prisonniers vont être amenés dans cette pièce et auront la possibilité d’ouvrir cinquante tiroirs.La pièce est remise en l’état après chaque passage et aucune communication est autorisé entre chaque passage.Les prisonniers seront alors graciés si et seulement si tous sans exception ont trouvé leurs numéros parmi les cinquante boites qu’ils auront ouvertes.Le directeur leurs laissent une nuit pour réfléchir à une stratégie gagnante.
+Le problèmes étant alors de trouver une stratégies qui maximise les chances des prisonniers de s’en sortir et quelle est sa probabilité.
+	Etant donné que chaque prisonniers peut ouvrir 50 tiroirs on pourrait alors pensé que chaque prisonnier à une chance sur deux de trouver sont numéros ainsi la bonne réponse serait de (1/2)puissance 100 mais ce n’est pas me cas il existe des stratégies pouvant attendre près de 30% de réussites.
+	Pour s’approcher de ce niveau de réussite il faut s’intéresser à un objet combinatoire :
+Les graphes de permutations.
+Avant de parler de graphe de permutations faisons un rappel sur ce qu’est un graphe.
+Un graphe est une structure composée d'objets dans laquelle certaines paires d'objets sont en relation. 
+Les objets du graphes sont nommés sommets ou noeuds et les relations entre sommets sont dites arêtes ou liens On distingue les graphes non orientés, où les arêtes relient deux sommets de manière symétrique, et les graphes orientés, où les arêtes, alors appelées flèches, relient deux sommets de manière asymétrique.
+Pour ce qui est du graphe de permutations à N noeuds on parle d’un graphe orientés avec N arêtes qui représente une permutation P allant de 1 à n où une arête de sommet i vers j indique que P(i) = j.
+La question est alors de savoir qu’elle est la probabilité qu’un graphe d’une permutation aléatoire ne possède aucun cycle de longueur strictement supérieur à 50.
+
+
+Version aléatoire:
+    Il existe alors plusieurs stratégie de résolution à ce problème.la première à laquelle on pense est à la stratégie aléatoire.Etant donné que chaque prisonniers peut ouvrir 50 boite ,on peut partir du principe que chauqe prisonnier à une chance sur deux de trouver son numéro dans un tiroirs au final.
+    Mais cela ne représente pas du tout un taut de réussite de 50% avec cette solution,car si chauqe prisonnier à une chance sur deux de trouver son numéro,si on applique cela sur les 100 prisonniers on se retrouve alors avec (1/2) puissance 100
+    ce qui equivaut à environ 7.8886091 * 10^31 pourcent de chance de réussite , sois un taux très très faible.
+
+ 
+
