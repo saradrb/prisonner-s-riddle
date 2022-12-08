@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 
 
 def create_tab(n):
-    i = 0
+    i = 1
     x = []
-    while (i < n):
+    while (i <= n):
         x = x + [i]
         i += 1
     random.shuffle(x)
@@ -18,9 +18,9 @@ def case_random_for_one_prisonner(tab, number, bool):
     temp = random.randint(0, len(tab))
     while (x < len(tab)/2):
         while temp in rand:
-            temp = random.randint(0, len(tab))
+            temp = random.randint(1, len(tab))
         rand = rand + [temp]
-        if (tab[temp - 1] == number):
+        if (tab[temp] == number):
             if bool:
                 print("le prisonnier numéro " + str(number) + " a trouver son nombre dans le tirroir numéro " + str(temp) + " au de "+ str(x)+" essais")
                 time.sleep(0.1)
@@ -35,7 +35,7 @@ def case_random_for_a_group_of_prisonner(len, bool):
     tab = create_tab(len)
     x = 0
     while (x < len):
-        if (case_random_for_one_prisonner(tab, x, bool) == False):
+        if (case_random_for_one_prisonner(tab, x + 1, bool) == False):
             if bool:
                 print("La stratégie aléatoire à echoué au bout du " + str(x + 1) + "prisonnier(s)")
                 time.sleep(0.1)

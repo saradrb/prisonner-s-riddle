@@ -11,12 +11,8 @@ Un graphe est une structure composée d'objets dans laquelle certaines paires 
 Les objets du graphes sont nommés sommets ou noeuds et les relations entre sommets sont dites arêtes ou liens On distingue les graphes non orientés, où les arêtes relient deux sommets de manière symétrique, et les graphes orientés, où les arêtes, alors appelées flèches, relient deux sommets de manière asymétrique.
 Pour ce qui est du graphe de permutations à N noeuds on parle d’un graphe orientés avec N arêtes qui représente une permutation P allant de 1 à n où une arête de sommet i vers j indique que P(i) = j.
 La question est alors de savoir qu’elle est la probabilité qu’un graphe d’une permutation aléatoire ne possède aucun cycle de longueur strictement supérieur à 50.
-
-
 Version aléatoire:
     Il existe alors plusieurs stratégie de résolution à ce problème.la première à laquelle on pense est à la stratégie aléatoire.Etant donné que chaque prisonniers peut ouvrir 50 boite ,on peut partir du principe que chauqe prisonnier à une chance sur deux de trouver son numéro dans un tiroirs au final.
     Mais cela ne représente pas du tout un taut de réussite de 50% avec cette solution,car si chauqe prisonnier à une chance sur deux de trouver son numéro,si on applique cela sur les 100 prisonniers on se retrouve alors avec (1/2) puissance 100
     ce qui equivaut à environ 7.8886091 * 10^31 pourcent de chance de réussite , sois un taux très très faible.
-
- 
 
