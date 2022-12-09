@@ -1,5 +1,7 @@
 import random
 import time
+import networkx as nx
+import matplotlib.pyplot as plot
 
 def create_tab(n):
     i = 1
@@ -10,6 +12,15 @@ def create_tab(n):
     random.shuffle(x)
     return x
 
+def create_drawers(n):
+    i=1
+    tab=create_tab(n)
+    drawers={}
+
+    for i,j in enumerate(tab):
+        drawers[i]=j
+    
+    return drawers
 def case_follow_for_one_prisonner(tab,number_p):
     bool=False
     tries=0
@@ -68,4 +79,18 @@ def how_many_try_to_resolve_the_case_follow(len):
         i += 1
     return i
 
-how_many_try_to_resolve_the_case_follow(20)
+def graph(size):
+    prisoners=[p for p in range(1,size+1)]
+    drawers=create_drawers(size)
+    print(drawers)
+    G=nx.DiGraph()
+    G.add_nodes_from(prisoners)
+    edges=[(u,v) for u,v in drawers.items()]
+    G.add_edges_from(edges,weight=1)
+    nx.draw(G, with_labels=True)
+    plot.show()
+
+
+
+#graph(40)
+#how_many_try_to_resolve_the_case_follow(20)
