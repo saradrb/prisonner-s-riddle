@@ -4,7 +4,7 @@ import random
 import time
 import networkx as nx
 import matplotlib.pyplot as plot
-import seaborn as sb
+import seaborn as sb 
 
 def create_tab(n):
     i = 1
@@ -138,12 +138,12 @@ def graph(drawers,size):
         for node in nodes:
             color_map[node] = num_cycle
             
-    loop_df = pd.DataFrame.from_dict(color_map, orient="index", columns=["num_cycle"])
-    loop_df["color"] = loop_df["num_cycle"].apply(lambda x: color_palet[x])
-    loop_df = loop_df.sort_index()
+    myCycle = pd.DataFrame.from_dict(color_map, orient="index", columns=["num_cycle"])
+    myCycle["color"] = myCycle["num_cycle"].apply(lambda x: color_palet[x])
+    myCycle = myCycle.sort_index()
 
     pos = None
-    nx.draw(G, pos, node_color=loop_df["color"].values, with_labels=True)
+    nx.draw(G, pos, node_color=myCycle["color"].values, with_labels=True)
     plot.show()
 
 drawers=create_drawers(10)
