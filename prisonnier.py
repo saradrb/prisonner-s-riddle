@@ -20,7 +20,7 @@ def case_random_for_one_prisonner(tab, number, bool):
         while temp in rand:
             temp = random.randint(1, len(tab))
         rand = rand + [temp]
-        if (tab[temp] == number):
+        if (tab[temp - 1] == number):
             if bool:
                 print("le prisonnier numéro " + str(number) + " a trouver son nombre dans le tirroir numéro " + str(temp) + " au de "+ str(x)+" essais")
                 time.sleep(0.1)
@@ -42,9 +42,10 @@ def case_random_for_a_group_of_prisonner(len, bool):
             return False
         x += 1
     if bool:
-        print("La strateégie aléatoire à marcher pour les " + str(len) + "prisonniers")
+        print("La stratégie aléatoire à marcher pour les " + str(len) + "prisonniers")
         time.sleep(0.1)
     return True
+
 def create_histograme(number_of_try, tab_result):
     left = [0,number_of_try]
     tick_label = ['failed', 'success']
@@ -68,7 +69,7 @@ def how_many_try_to_resolve_the_case_random(len, bool, trytest):
     create_histograme(trytest, [i,j])
 
 def random_strat():
-    print("Bonjour voici une implementatio de la méthode random de résolution,veuillez choisir sur combien de prisonnier vous voulez la faire")
+    print("Bonjour voici une implementation de la méthode random de résolution,veuillez choisir sur combien de prisonnier vous voulez la faire")
     print("tapez votre nombre")
     number = int(input())
     print("Vous avez choisi " + str(number) + " voulez vous voir le déroulez avec les différents affichage ?")
