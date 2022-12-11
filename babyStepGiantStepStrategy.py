@@ -73,28 +73,3 @@ def baby_step_giant_step_for_group_of_prisoner(len, print_msg):
         print("Victoire! La stratégie baby-step giant-step est un succès, tous les prisonniers ont trouvé leur numéro!")
         time.sleep(0.1)
     return True
-    
-# def bsgs_strat():
-#     print("Bonjour voici une implementation  de la méthode babystep giant step de résolution,veuillez choisir sur combien de prisonnier vous voulez la faire ")
-#     print("tapez votre nombre")
-#     number = int(input())
-#     print("Vous avez choisi " + str(number) + " voulez vous voir le déroulez avec les différents affichage ?")
-#     print("PS: au dessus de 20 prisonnier cela peux prendre des millions d'éssais avant une reussite, l'affichage pourrait tout ralentir")
-#     print("[y/n]")
-#     choice = str(input())
-#     print("Voulez vous faire plusieurs essaie pour obtenir un graphe ? (attention si vous avez mis un trop gros nombre le graphe peut prendre très longtemps à s'afficher)")
-#     print("[y/n]")
-#     choice2 = str(input())
-
-#     if (choice == 'y' or choice == 'Y'):
-#         choice = True
-#     else:
-#         choice = False
-
-#     if (choice2 == 'y' or choice2 == 'Y'):
-#         print("Combien d'essais ?")
-#         trytest = int(input())
-#         #how_many_tries_to_solve_baby_step_giant_step(number, choice, trytest)
-#     else:
-#         print(baby_step_giant_step_for_group_of_prisoner(number, choice))
-#bsgs_strat()
