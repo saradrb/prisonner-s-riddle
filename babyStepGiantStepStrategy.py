@@ -1,7 +1,8 @@
 from math import ceil, sqrt
 import time
-from permutation import create_permutation
+from permutation import create_permutatio
 
+# #(source: Wikipedia)
 # #Entrée: un groupe cyclique G d'ordre n, ayant un générateur g et un élément h.
 # def baby_step_giant_step(g, h, n):
 #     #m ← [√n]+1
