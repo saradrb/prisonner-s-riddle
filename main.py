@@ -62,9 +62,9 @@ if __name__ == '__main__' :
             print("Voulez vous afficher le détail de la solution ? [Y/N]")
             detail = input().upper()
             if (detail == "Y" or detail == "N") : break
-            else : print("Veuillez entrer [D] ou [S].")
+            else : print("Veuillez entrer [Y] ou [N].")
         
-        if (detail == "D") : print_msg = True
+        if (detail == "Y") : print_msg = True
         else : print_msg = False
 
         if (strategy == "A") :
