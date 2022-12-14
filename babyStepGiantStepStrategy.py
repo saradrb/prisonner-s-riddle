@@ -1,6 +1,6 @@
 from math import ceil, sqrt
 import time
-from permutation import create_permutatio
+from permutation import create_permutation
 
 # #(source: Wikipedia)
 # #Entrée: un groupe cyclique G d'ordre n, ayant un générateur g et un élément h.
